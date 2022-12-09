@@ -13,7 +13,7 @@ jobs:
         uses: actions/setup-java@v1
         with:
           java-version: 1.11
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v2
         with:
           fetch-depth: 0  # Shallow clones should be disabled for a better relevancy of analysis
       - name: Cache SonarQube packages
@@ -34,12 +34,12 @@ jobs:
         shell: powershell
         run: |
           New-Item -Path .\.sonar\scanner -ItemType Directory
-          dotnet tool install dotnet-sonarscanner --tool-path .\.sonar\scanner
+          dotnet tool update dotnet-sonarscanner --tool-path .\.sonar\scanner
       - name: Build and analyze
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  # Needed to get PR information, if any
         shell: powershell
         run: |
-          .\.sonar\scanner\dotnet-sonarscanner begin /k:"pjuniorzamp_sonar-demo_AYTynKkNPIVP8hJ-KwFa" /d:sonar.login="${{ secrets.SONAR_TOKEN }}" /d:sonar.host.url="${{ secrets.SONAR_HOST_URL }}"
+          .\.sonar\scanner\dotnet-sonarscanner begin /k:"pjuniorzamp_sonar-demo" /d:sonar.login="${{ secrets.SONAR_TOKEN }}" /d:sonar.host.url="${{ secrets.SONAR_HOST_URL }}"
           dotnet build
           .\.sonar\scanner\dotnet-sonarscanner end /d:sonar.login="${{ secrets.SONAR_TOKEN }}"
