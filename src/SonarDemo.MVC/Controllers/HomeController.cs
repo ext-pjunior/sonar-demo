@@ -15,12 +15,26 @@ public class HomeController : Controller
 
     public IActionResult Index()
     {
-        return View();
+        var list = new List<string>{
+            "Dotnet", "MVC", "Angular", "Testes Unitários"
+        };
+        return View(list);
     }
 
     public IActionResult Privacy()
     {
-        return View();
+        var list = new List<string>{
+            "Dotnet", "MVC", "Angular", "Testes Unitários"
+        };
+        return View(list);
+    }
+
+     public IActionResult MinhaLista()
+    {
+        var list = new List<string>{
+            "Dotnet", "MVC", "Angular", "Testes Unitários"
+        };
+        return View(list);
     }
 
     [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
