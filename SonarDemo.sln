@@ -7,8 +7,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{4F3DDB07-3DF
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SonarDemo.MVC", "src\SonarDemo.MVC\SonarDemo.MVC.csproj", "{8D54E723-4C6C-4C02-8BBD-E098EDA79D33}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SonarDemo.Tests", "src\SonarDemo.Tests\SonarDemo.Tests.csproj", "{971AB3E6-AA69-4F79-836E-BB8DEDE56523}"
-EndProject
+
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
