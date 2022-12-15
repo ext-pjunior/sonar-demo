@@ -15,7 +15,6 @@ public class HomeController : Controller
 
     public IActionResult Index()
     {
-        var teste = 2 / 0;
         return View();
     }
 
