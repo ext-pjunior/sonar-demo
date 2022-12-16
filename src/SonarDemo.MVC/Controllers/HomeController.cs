@@ -15,8 +15,6 @@ public class HomeController : Controller
 
     public IActionResult Index()
     {
-        var cliente01 = new Cliente{ Nome = "Fulano", Email = null };
-
         return View();
     }
 
