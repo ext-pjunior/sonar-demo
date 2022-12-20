@@ -43,8 +43,7 @@ jobs:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
         shell: powershell
         run: |
-          dotnet tool install --global dotnet-coverage
-          
-          .\.sonar\scanner\dotnet-sonarscanner begin /k:"pjuniordev_sonar-demo" /o:"pjuniordev" /d:sonar.login="${{ secrets.SONAR_TOKEN }}" /d:sonar.host.url="https://sonarcloud.io"
+          .\.sonar\scanner\dotnet-sonarscanner begin /k:"pjuniordev_sonar-demo" /o:"pjuniordev" /d:sonar.login="${{ secrets.SONAR_TOKEN }}" /d:sonar.cs.vscoverage.reportsPaths=output.coverage /d:sonar.host.url="https://sonarcloud.io"
           dotnet build
+          dotnet-coverage collect 'dotnet test' -f xml  -o 'output.coverage'
           .\.sonar\scanner\dotnet-sonarscanner end /d:sonar.login="${{ secrets.SONAR_TOKEN }}"
