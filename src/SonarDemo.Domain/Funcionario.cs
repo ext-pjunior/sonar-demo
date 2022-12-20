@@ -15,42 +15,42 @@ namespace SonarDemo.Domain
         public Funcionario(string nome, double salario)
         {
             Nome = string.IsNullOrEmpty(nome) ? "Fulano" : nome;
-            DefinirSalario(salario);
-            DefinirHabilidades();
+            // DefinirSalario(salario);
+            // DefinirHabilidades();
         }
 
-        public void DefinirSalario(double salario)
-        {
-            if(salario < 500) throw new Exception("Salario inferior ao permitido");
+        // public void DefinirSalario(double salario)
+        // {
+        //     if(salario < 500) throw new Exception("Salario inferior ao permitido");
 
-            Salario = salario;
-            if (salario < 2000) NivelProfissional = NivelProfissional.Junior;
-            else if (salario >= 2000 && salario < 8000) NivelProfissional = NivelProfissional.Pleno;
-            else if (salario >= 8000) NivelProfissional = NivelProfissional.Senior;
-        }
+        //     Salario = salario;
+        //     if (salario < 2000) NivelProfissional = NivelProfissional.Junior;
+        //     else if (salario >= 2000 && salario < 8000) NivelProfissional = NivelProfissional.Pleno;
+        //     else if (salario >= 8000) NivelProfissional = NivelProfissional.Senior;
+        // }
 
-        private void DefinirHabilidades()
-        {
-            var habilidadesBasicas = new List<string>()
-            {
+        // private void DefinirHabilidades()
+        // {
+        //     var habilidadesBasicas = new List<string>()
+        //     {
                 
-                "Lógica de Programação",
-                "OOP"
-            };
+        //         "Lógica de Programação",
+        //         "OOP"
+        //     };
 
-            Habilidades = habilidadesBasicas;
+        //     Habilidades = habilidadesBasicas;
 
-            switch (NivelProfissional)
-            {
-                case NivelProfissional.Pleno:
-                    Habilidades.Add("Testes");
-                    break;
-                case NivelProfissional.Senior:
-                    Habilidades.Add("Testes");
-                    Habilidades.Add("Microservices");
-                    break;
-            }
-        }
+        //     switch (NivelProfissional)
+        //     {
+        //         case NivelProfissional.Pleno:
+        //             Habilidades.Add("Testes");
+        //             break;
+        //         case NivelProfissional.Senior:
+        //             Habilidades.Add("Testes");
+        //             Habilidades.Add("Microservices");
+        //             break;
+        //     }
+        // }
     }
 
     public enum NivelProfissional
@@ -60,11 +60,11 @@ namespace SonarDemo.Domain
         Senior
     }
 
-    public class FuncionarioFactory
-    {
-        public static Funcionario Criar(string nome, double salario)
-        {
-            return new Funcionario(nome, salario);
-        }
-    }
+    // public class FuncionarioFactory
+    // {
+    //     public static Funcionario Criar(string nome, double salario)
+    //     {
+    //         return new Funcionario(nome, salario);
+    //     }
+    // }
 }
