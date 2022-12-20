@@ -2,5 +2,7 @@
     "sonarlint.connectedMode.project": {
         "connectionId": "Sonar-Demo-Cloud",
         "projectKey": "pjuniordev_sonar-demo"
-    }
+    },
+
+    "dotnet-test-explorer.testProjectPath": "**/*Tests.@(csproj|vbproj|fsproj)"
 }
