@@ -7,6 +7,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{4F3DDB07-3DF
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SonarDemo.MVC", "src\SonarDemo.MVC\SonarDemo.MVC.csproj", "{8D54E723-4C6C-4C02-8BBD-E098EDA79D33}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SonarDemo.Tests", "src\SonarDemo.Tests\SonarDemo.Tests.csproj", "{096AC7AE-E3A3-4DFC-BD45-9DAF61342BBA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SonarDemo.Domain", "src\SonarDemo.Domain\SonarDemo.Domain.csproj", "{D11F5A25-CCE1-46D8-83F7-90D6ED1750D7}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -20,8 +24,18 @@ Global
 		{8D54E723-4C6C-4C02-8BBD-E098EDA79D33}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8D54E723-4C6C-4C02-8BBD-E098EDA79D33}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8D54E723-4C6C-4C02-8BBD-E098EDA79D33}.Release|Any CPU.Build.0 = Release|Any CPU
+		{096AC7AE-E3A3-4DFC-BD45-9DAF61342BBA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{096AC7AE-E3A3-4DFC-BD45-9DAF61342BBA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{096AC7AE-E3A3-4DFC-BD45-9DAF61342BBA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{096AC7AE-E3A3-4DFC-BD45-9DAF61342BBA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D11F5A25-CCE1-46D8-83F7-90D6ED1750D7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D11F5A25-CCE1-46D8-83F7-90D6ED1750D7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D11F5A25-CCE1-46D8-83F7-90D6ED1750D7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D11F5A25-CCE1-46D8-83F7-90D6ED1750D7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{8D54E723-4C6C-4C02-8BBD-E098EDA79D33} = {4F3DDB07-3DFA-42B5-A09A-3B6A6B42BB0A}
+		{096AC7AE-E3A3-4DFC-BD45-9DAF61342BBA} = {4F3DDB07-3DFA-42B5-A09A-3B6A6B42BB0A}
+		{D11F5A25-CCE1-46D8-83F7-90D6ED1750D7} = {4F3DDB07-3DFA-42B5-A09A-3B6A6B42BB0A}
 	EndGlobalSection
 EndGlobal
