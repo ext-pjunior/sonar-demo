@@ -21,7 +21,7 @@ namespace SonarDemo.Domain
 
         public void DefinirSalario(double salario)
         {
-            if(salario < 500) throw new ArgumentNullException("Salario inferior ao permitido");
+            if(salario < 500) throw new Exception("Salario inferior ao permitido");
 
             Salario = salario;
             if (salario < 2000) NivelProfissional = NivelProfissional.Junior;
