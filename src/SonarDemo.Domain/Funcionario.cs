@@ -2,15 +2,15 @@ namespace SonarDemo.Domain
 {
      public class Pessoa
     {
-        public string Nome { get; protected set; }
-        public string Apelido { get; set; }
+        public string Nome { get; protected set; } = null!;
+        public string Apelido { get; set; } = null!;
     }
 
     public class Funcionario : Pessoa
     {
         public double Salario { get; private set; }
         public NivelProfissional NivelProfissional { get; private set; }
-        public IList<string> Habilidades { get; private set; }
+        public IList<string> Habilidades { get; private set; } = null!;
 
         public Funcionario(string nome, double salario)
         {
@@ -21,7 +21,7 @@ namespace SonarDemo.Domain
 
         public void DefinirSalario(double salario)
         {
-            if(salario < 500) throw new Exception("Salario inferior ao permitido");
+            if(salario < 500) throw new ArgumentNullException("Salario inferior ao permitido");
 
             Salario = salario;
             if (salario < 2000) NivelProfissional = NivelProfissional.Junior;
@@ -60,7 +60,7 @@ namespace SonarDemo.Domain
         Senior
     }
 
-    public class FuncionarioFactory
+    public static class FuncionarioFactory
     {
         public static Funcionario Criar(string nome, double salario)
         {
